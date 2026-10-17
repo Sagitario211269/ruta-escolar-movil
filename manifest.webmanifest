@@ -1,0 +1,19 @@
+{
+  "name": "Ruta Escolar Inteligente · Monitora",
+  "short_name": "Ruta Escolar",
+  "description": "Lector QR y control local de abordaje escolar",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f6fa",
+  "theme_color": "#10243a",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

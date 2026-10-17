@@ -1,0 +1,36 @@
+RUTA ESCOLAR INTELIGENTE — MÓDULO MÓVIL ANDROID / IPHONE
+
+QUÉ HACE
+- Importa el respaldo integral JSON exportado desde la aplicación de coordinación.
+- Guarda estudiantes, rutas y eventos en el almacenamiento local del navegador del teléfono.
+- Lee QR en vivo con la cámara cuando la aplicación está abierta desde HTTPS y tiene permiso.
+- Alternativas: leer una foto del QR o escribir el token manualmente.
+- Registra/reversa abordajes con motivo, valida ruta asignada, días no hábiles y recorridos cerrados.
+- Exporta el respaldo completo para devolverlo a coordinación.
+- El service worker permite abrir la interfaz sin conexión después de la primera carga segura.
+
+IMPORTANTE SOBRE CÁMARA E INSTALACIÓN
+Los navegadores Android/iPhone bloquean la cámara en páginas HTTP no seguras y en la mayoría de aperturas file://. Para instalación PWA y cámara en vivo, publique SOLO esta carpeta /movil en un alojamiento estático HTTPS gratuito (por ejemplo GitHub Pages). No se requiere backend, base de datos en la nube ni suscripción. Los datos de estudiantes y abordajes NO se suben al alojamiento; permanecen en el almacenamiento local del teléfono.
+
+ANDROID
+1. Abra la URL HTTPS publicada en Chrome.
+2. Importe el JSON integral desde coordinación.
+3. Menú ⋮ > Instalar aplicación / Añadir a pantalla de inicio.
+4. Permita la cámara al pulsar Abrir lector QR.
+
+IPHONE
+1. Abra la URL HTTPS en Safari.
+2. Compartir > Añadir a pantalla de inicio.
+3. Importe el JSON integral y permita cámara cuando se solicite.
+
+OPERACIÓN DIARIA
+1. Antes del recorrido, importe el respaldo más reciente desde coordinación (esto carga estudiantes/rutas).
+2. Seleccione ruta y fecha; registre por QR/foto/token.
+3. Al terminar, pulse Exportar respaldo y comparta el JSON con coordinación.
+4. En el computador: Transferencias > Importar y combinar. No borre datos del móvil hasta confirmar la importación.
+
+ALMACENAMIENTO Y LÍMITES
+- No hay sincronización automática entre teléfono y PC. La transferencia se hace por archivo, como se definió para operar sin servidor.
+- Si borra datos del navegador o desinstala la app, puede perder datos no exportados.
+- La fecha y los bloqueos se validan localmente; confirme que el teléfono tenga la base importada más reciente antes de iniciar.
+- Esta entrega es una PWA web, no un APK nativo ni una app firmada de App Store. La instalación por HTTPS permite usarla como app en ambos sistemas.
